@@ -1,3 +1,6 @@
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/style.css ***!
+  \****************************************************************************************************/
 /* h1 {
     text-align: center;
     font-family:cursive;
@@ -75,7 +78,7 @@ svg{
 
 
 #tooltip{
-    font-size: 14px;
+    font-size: 23px;
     font-weight: 600;
     text-align: center;
     visibility: hidden;
@@ -209,6 +212,7 @@ body.active{
     content: 'US Unemployment Rate';
 } */
 
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
 
-
-/*# sourceMappingURL=main.css.map*/
