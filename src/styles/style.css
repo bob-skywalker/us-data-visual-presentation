@@ -214,6 +214,22 @@ body.active{
     font-size: small;
 }
 
+
+#tabs{
+    position:absolute;
+}
+
+
+.w3-bar w3-black{
+    top: 50px;
+}
+
 /* #title.active::after{
     content: 'US Unemployment Rate';
 } */
+
+
+button{
+    background-color:rgb(223, 144, 144);
+    cursor: pointer;
+}

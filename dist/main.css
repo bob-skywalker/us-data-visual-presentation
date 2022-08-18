@@ -217,9 +217,25 @@ body.active{
     font-size: small;
 }
 
+
+#tabs{
+    position:absolute;
+}
+
+
+.w3-bar w3-black{
+    top: 50px;
+}
+
 /* #title.active::after{
     content: 'US Unemployment Rate';
 } */
+
+
+button{
+    background-color:rgb(223, 144, 144);
+    cursor: pointer;
+}
 
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
