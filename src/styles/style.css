@@ -75,6 +75,7 @@ svg{
 
 
 #tooltip{
+    padding: 15px;
     font-size: 23px;
     font-weight: 600;
     text-align: center;
@@ -203,6 +204,14 @@ body.active{
 
 #text{
     margin-left: 690px;
+}
+
+#guide{
+    position: absolute;
+    left: 1510px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    ;
+    font-size: small;
 }
 
 /* #title.active::after{
