@@ -59,7 +59,7 @@
       <!-- <p>* Hover over for Dynamic County Result</p> -->
       <div class="w3-bar w3-black">
         <button class="w3-bar-item w3-button" onclick="openTab('covidMap')">Covid Map</button>
-        <button class="w3-bar-item w3-button" onclick="openTab('un')">Unemployment Map</button>
+        <button class="w3-bar-item w3-button" onclick="openTab('un')">Unemp Map</button>
         <button class="w3-bar-item w3-button" onclick="openTab('toggles')">Toggle</button>
       </div>
 
@@ -95,14 +95,15 @@
         </script>
 
 
-
+      </div>
     </div>
 
 
     <div id="container2" class="hidden">
+
       <div id ='leftside'>
-          <div id="tooltip"></div>
-            <svg id="legend">
+          <div id="tooltip2" class="hidden"></div>
+            <svg id="legend2" class="hidden">
               <g>
                 <rect x="10" y="0" width="40" height="30" fill="dodgerblue"></rect>
                 <text x="60" y="20" fill="black">Less than 3%</text>
@@ -127,14 +128,17 @@
         </div>
         <svg id="canvas2" class="hidden">
         </svg>
+
       </div>
     </div>
+    </div>
     <div id="bottom">
+      <a href="#"><p id="text"></p></a>
       <div id="toggle">
         <p></p>
         <i class="indicator"></i>
-        <a href="#"><p id="text">Sources: CDC.GOV 2020</p></a>
       </div>
+      <a href="https://raw.githubusercontent.com/Zoooook/CoronavirusTimelapse/master/static/population.json"><p id="text">Sources: CoronavirusTimelapse</p></a>
     </div>
     <script>
       // const body = document.querySelector('body');

@@ -29,6 +29,15 @@ path:hover {
     pointer-events: none;
 } */
 
+
+html {
+    zoom: 0.9; /* Old IE only */
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+
 #title{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 40px;
@@ -64,13 +73,13 @@ svg{
 
 #canvas{
 
-    margin-left: 200px;
+    margin-left: 00px;
     min-width: 1000px;
     min-height: 620px
 }
 
 #canvas2{
-    margin-left: 200px;
+    margin-left: 00px;
     min-width: 1000px;
     min-height: 620px
 }
@@ -78,8 +87,11 @@ svg{
 
 
 #tooltip{
-    padding: 15px;
-    font-size: 23px;
+    /* left: 20px; */
+    /* top: 250px;
+    position: absolute; */
+    padding: 12px;
+    font-size: 24px;
     font-weight: 600;
     text-align: center;
     visibility: hidden;
@@ -88,6 +100,18 @@ svg{
     /* width: auto;
     height: auto; */
 }
+
+#tooltip2{
+    top: 250px;
+    position: absolute;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    visibility: hidden;
+    color:whitesmoke;
+}
+
 
 .county:hover{
     /* transform: translateY(-100px); */
@@ -100,7 +124,7 @@ svg{
 #leftSide{
     left: -300px;
     z-index: -1;
-    position: absolute;
+    /* position: absolute; */
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -109,10 +133,24 @@ svg{
     /* background-color: darkslategrey; */
 }
 
+#leftSide2{
+    left: -300px;
+    z-index: -1;
+    /* position: absolute; */
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
 #container{
     display: flex;
 }
 
+#container2{
+    display: flex;
+}
 
 #legend{
     text-align: center;
@@ -210,7 +248,7 @@ body.active{
 }
 
 #guide{
-    position: absolute;
+    /* position: absolute; */
     left: 1510px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     ;

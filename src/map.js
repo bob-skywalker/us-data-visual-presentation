@@ -1,7 +1,10 @@
 import { count } from "d3"
 
 export const map = async function(){
-
+    const tooltip1 = document.querySelector('#tooltip');
+    const tooltip22 = document.querySelector('#tooltip2');
+    const legends2 = document.querySelector('#legend2');
+    const guide = document.querySelector('#guide');
     const body = document.querySelector('body');
     const title = document.querySelector('#title');
     const title2 = document.querySelector('#title2');
@@ -11,8 +14,12 @@ export const map = async function(){
     const leftSide = document.querySelector('#leftSide');
     const legend = document.querySelector('#legend');
     const container2 = document.querySelector('#container2');
-    const tabs = document.querySelector('.tabs');
+    // const tabs = document.querySelector('.tabs');
     toggle.onclick = function(){
+      tooltip1.classList.toggle('hidden')
+      tooltip22.classList.toggle('hidden')
+      legends2.classList.toggle('hidden')
+      guide.classList.toggle('hidden')
       toggle.classList.toggle('active')
       body.classList.toggle('active')
       title.classList.toggle('hidden')
@@ -22,7 +29,7 @@ export const map = async function(){
       leftSide.classList.toggle('hidden')
       legend.classList.toggle('hidden')
       container2.classList.toggle('hidden')
-      tabs.classList.toggle('hidden')
+      // tabs.classList.toggle('hidden')
     }
 
 
@@ -39,7 +46,7 @@ export const map = async function(){
   let canvas = d3.select('#canvas')
   let canvasTwo = d3.select('#canvas2')
   let tooltip = d3.select('#tooltip')
-
+  let tooltip2 = d3.select('#tooltip2')
 
   let drawMap = () => {
 
@@ -55,21 +62,23 @@ export const map = async function(){
             .on('mouseover',(countyDataItem)=>{
               tooltip.transition()
                     .style("visibility", "visible")
+              tooltip2.transition()
+                    .style("visibility", "visible")
 
                 let id = countyDataItem['id']
                 let county = covidData.find((item)=>{
                   return +item.us_county_fips === id
                 })
                 if (county['population']< 3000){
-                  tooltip.text('Severity: Low  || County Cases: ' + county['population'])
+                  tooltip.text('Severity: Low County Cases: ' + county['population'])
                 } else if ((county['population'] > 3000) && (county['population'] < 8000)){
-                  tooltip.text('Severity: Mild  || County Cases: ' + county['population'])
+                  tooltip.text('Severity: Mild County Cases: ' + county['population'])
                 } else if ((county['population'] > 8000) && (county['population'] < 20000)){
-                  tooltip.text('Severity: Moderate  || County Cases: ' + county['population'])
+                  tooltip.text('Severity: Moderate County Cases: ' + county['population'])
                 } else if ((county['population'] > 20000) && (county['population'] < 250000)){
-                  tooltip.text('Severity: Severe  || County Cases: ' + county['population'])
+                  tooltip.text('Severity: Severe County Cases: ' + county['population'])
                 } else {
-                  tooltip.text('Severity: Devilish  || County Cases: ' + county['population'])
+                  tooltip.text('Severity: Devilish County Cases: ' + county['population'])
                 }
 
 
@@ -164,15 +173,15 @@ export const map = async function(){
                     return +item.fips === id
                   })
                   if(county['unemp'] < 3.0){
-                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                    tooltip2.text('County Unemployment Rate: ' + county['unemp'] + '%')
                   } else if ((county['unemp'] > 3.0 ) && (county['unemp'] < 4)){
-                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                    tooltip2.text('County Unemployment Rate: ' + county['unemp'] + '%')
                   } else if ((county['unemp'] > 4 ) && (county['unemp'] < 6)){
-                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                    tooltip2.text('County Unemployment Rate: ' + county['unemp'] + '%')
                   } else if ((county['unemp'] > 6 ) && (county['unemp'] < 8)){
-                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                    tooltip2.text('County Unemployment Rate: ' + county['unemp'] + '%')
                   } else {
-                    tooltip.text('County Unemployment Rate: ' + county['unemp'] + '%')
+                    tooltip2.text('County Unemployment Rate: ' + county['unemp'] + '%')
                   }
 
 
@@ -233,4 +242,5 @@ export const map = async function(){
           )
         }
       })
+
 }
