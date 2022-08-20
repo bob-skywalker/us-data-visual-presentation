@@ -1,6 +1,7 @@
 import { count } from "d3"
 
 export const map = async function(){
+    const guide2 = document.querySelector('#guide2')
     const tooltip1 = document.querySelector('#tooltip');
     const tooltip22 = document.querySelector('#tooltip2');
     const legends2 = document.querySelector('#legend2');
@@ -16,6 +17,7 @@ export const map = async function(){
     const container2 = document.querySelector('#container2');
     // const tabs = document.querySelector('.tabs');
     toggle.onclick = function(){
+      guide2.classList.toggle('hidden')
       tooltip1.classList.toggle('hidden')
       tooltip22.classList.toggle('hidden')
       legends2.classList.toggle('hidden')
