@@ -131,19 +131,19 @@
         <div id="guide2" class="hidden">
           <!-- <p>* Hover over for Dynamic County Result</p> -->
           <div class="w3-bar w3-black2">
-            <button class="w3-bar-item w3-button2" onclick="openTab2('covidMap2')">Covid Map</button>
-            <button class="w3-bar-item w3-button2" onclick="openTab2('un2')">Unemp Map</button>
+            <button class="w3-bar-item w3-button2" onclick="openTab2('covidMap2')">Unemp Map</button>
+            <button class="w3-bar-item w3-button2" onclick="openTab2('un2')">Covid Map</button>
             <button class="w3-bar-item w3-button2" onclick="openTab2('toggles2')">Toggle</button>
           </div>
 
-          <div id="covidMap2" class="w3-container w3-display-container city2">
+          <div id="un2" class="w3-container w3-display-container city2" style="display:none">
             <span onclick="this.parentElement.style.display='none'"
             class="w3-button w3-large w3-display-topright2">&times;</span>
             <h2>2020 Covid Cases By County</h2>
             <p>Hover Over each segment on the US map to show the population of covid cases for the specific county. </p>
           </div>
 
-          <div id="un2" class="w3-container w3-display-container city2" style="display:none">
+          <div id="covidMap2" class="w3-container w3-display-container city2">
             <span onclick="this.parentElement.style.display='none'"
             class="w3-button w3-large w3-display-topright2">&times;</span>
             <h2>2020 Unemployment Cases By County</h2>
