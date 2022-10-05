@@ -42,7 +42,7 @@ export const map = async function(){
   let covidData
   let parsedData = await fetch('./data/unemployment.json')
   let unemployData = await parsedData.json()
-  console.log(unemployData)
+  // console.log(unemployData)
 
 
   let canvas = d3.select('#canvas')
@@ -88,6 +88,7 @@ export const map = async function(){
             .on('mouseout',(countyDataItem)=>{
               tooltip.transition()
                     .style("visibility","hidden")
+              
             })
             .attr('fill',(countyDataItem)=>{
               let id = countyDataItem['id']
@@ -138,7 +139,7 @@ export const map = async function(){
         console.log(error)
       } else{
         countyData = topojson.feature(data, data.objects.counties).features
-        console.log(countyData)
+        // console.log(countyData)
 
         d3.json(covidURL).then(
           (data,error)=>{
@@ -147,7 +148,7 @@ export const map = async function(){
             }else
               window.covidData = data
               covidData = data
-              console.log(covidData)
+              // console.log(covidData)
               drawMap()
           }
         )
@@ -167,7 +168,7 @@ export const map = async function(){
                 return el.id
               })
               .on('mouseover',(countyDataItem)=>{
-                tooltip.transition()
+                tooltip2.transition()
                       .style("visibility", "visible")
 
                   let id = countyDataItem['id']
@@ -189,7 +190,7 @@ export const map = async function(){
 
               })
               .on('mouseout',(countyDataItem)=>{
-                tooltip.transition()
+                tooltip2.transition()
                       .style("visibility","hidden")
               })
               .attr('fill',(countyDataItem)=>{
