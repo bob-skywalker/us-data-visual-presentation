@@ -6,9 +6,6 @@
 }
 
 
-html, body{
-    /* min-height: 100%; */
-}
 
 body{
     /* display: flex;
@@ -18,7 +15,7 @@ body{
     background-color: rgb(103, 204, 207);
     /* background: linear-gradient(#e66465, #9198e5); */
     transition: 3s;
-
+    zoom: 80%
 }
 
 svg{

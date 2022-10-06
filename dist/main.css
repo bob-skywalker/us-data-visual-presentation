@@ -9,9 +9,6 @@
 }
 
 
-html, body{
-    /* min-height: 100%; */
-}
 
 body{
     /* display: flex;
@@ -21,7 +18,7 @@ body{
     background-color: rgb(103, 204, 207);
     /* background: linear-gradient(#e66465, #9198e5); */
     transition: 3s;
-
+    zoom: 80%
 }
 
 svg{
@@ -243,6 +240,7 @@ button{
     background-color:rgb(223, 144, 144);
     cursor: pointer;
 }
+
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
