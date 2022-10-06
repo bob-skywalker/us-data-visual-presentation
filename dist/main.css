@@ -1,58 +1,11 @@
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/style.css ***!
   \****************************************************************************************************/
-/* h1 {
-    text-align: center;
-    font-family:cursive;
-    color:rgb(54, 50, 19);
-}
-svg {
-    width: 960px;
-    height: 600px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-path:hover {
-    fill:rgb(94, 162, 6);
-}
-.states {
-    fill:rgb(235, 166, 27);
-    stroke: black;
-}
-.state-borders {
-    fill: none;
-    stroke: black;
-    stroke-width: 0.5px;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    pointer-events: none;
-} */
-
-
-/* html {
-    zoom: 0.9; 
-    -moz-transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-} */
-
-
-/* #title{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 40px;
-} */
-
-/* #title2{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    color:rgb(246, 242, 242)
-} */
-
 .map-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 13vh;
 }
 
 
@@ -146,14 +99,14 @@ svg{
 #container{
     display: flex;
     justify-content: space-around;
-    transform:translate(3%,40%);
+    /* transform:translate(3%,40%); */
+    /* align-items: center; */
 
 }
 
 #container2{
     display: flex;
     justify-content: space-around;
-    transform:translate(3%,40%);
 }
 
 #legend{
@@ -290,7 +243,6 @@ button{
     background-color:rgb(223, 144, 144);
     cursor: pointer;
 }
-
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
