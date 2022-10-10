@@ -71,7 +71,10 @@ export const map = async function(){
                 let county = covidData.find((item)=>{
                   return +item.us_county_fips === id
                 })
-                if (county['population']< 3000){
+                
+                if (!county){
+                  tooltip.text('No info available at this time!')}
+                else if (county['population']< 3000){
                   tooltip.text('Severity: Low County Cases: ' + county['population'])
                 } else if ((county['population'] > 3000) && (county['population'] < 8000)){
                   tooltip.text('Severity: Mild County Cases: ' + county['population'])
@@ -79,7 +82,8 @@ export const map = async function(){
                   tooltip.text('Severity: Moderate County Cases: ' + county['population'])
                 } else if ((county['population'] > 20000) && (county['population'] < 250000)){
                   tooltip.text('Severity: Severe County Cases: ' + county['population'])
-                } else {
+                }
+                else {
                   tooltip.text('Severity: Devilish County Cases: ' + county['population'])
                 }
 
@@ -88,7 +92,7 @@ export const map = async function(){
             .on('mouseout',(countyDataItem)=>{
               tooltip.transition()
                     .style("visibility","hidden")
-              
+
             })
             .attr('fill',(countyDataItem)=>{
               let id = countyDataItem['id']
@@ -100,7 +104,7 @@ export const map = async function(){
 
 
               if (!county){
-                return 'firebrick'
+                return 'black'
                 // return 'limegreen'
               }
               let numbers = +county['population']
@@ -128,6 +132,13 @@ export const map = async function(){
                 return +item.us_county_fips === id
 
               })
+
+              // let numbers
+              // if (typeof +county['population'] === 'undefined') {
+              //   return '1000'
+              // } else {
+              //   numbers = +county['population']
+              // }
               let numbers = +county['population']
               return numbers
             })
