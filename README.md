@@ -1,6 +1,10 @@
 ## 2020 US Data Visualizer
-This US Data Visualizer aims to provides detailed, precise data to accurately represent the count in numbers of varies data ranging from unemployment rate to number of confirmed covid cases in the year of 2020 with a simple hover over.
+[The US Data Visualizer](https://bob-skywalker.github.io/us-data-visual-presentation/)
+ aims to provides detailed, precise data to accurately represent the count in numbers of varies data ranging from unemployment rate to number of confirmed covid cases in the year of 2020 with a simple hover over.
 ## Demo
+![Alt Text](https://media2.giphy.com/media/EI43r9zeRLr4VhPQWI/giphy.gif?cid=790b76118106635abe40e87948bb63b97525bfb62da868f9&rid=giphy.gif&ct=g)
+
+
 ## Features
 *  interact with the databa base through simple mouseover, to display varies datas
 *  toggle at the bottom of the page that dynamically changes the data & color of data
