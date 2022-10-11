@@ -17,3 +17,93 @@
 *  asynchronically fetching 2 set of databases  
 
 
+## Code Snippet
+
+**D3 Draw Map && filter by county population**
+
+```js
+  let drawMap = () => {
+
+    canvas.selectAll('path')
+            .data(countyData)
+            .enter()
+            .append('path')
+            .attr('d', d3.geoPath())
+            .attr('class','county')
+            .attr('data-pop',(el)=>{
+              return el.id
+            })
+            .on('mouseover',(countyDataItem)=>{
+              tooltip.transition()
+                    .style("visibility", "visible")
+              tooltip2.transition()
+                    .style("visibility", "visible")
+
+                let id = countyDataItem['id']
+                let county = covidData.find((item)=>{
+                  return +item.us_county_fips === id
+                })
+
+                if (!county){
+                  tooltip.text('No info available at this time!')}
+                else if (county['population']< 3000){
+                  tooltip.text('Severity: Low County Cases: ' + county['population'])
+                } else if ((county['population'] > 3000) && (county['population'] < 8000)){
+                  tooltip.text('Severity: Mild County Cases: ' + county['population'])
+                } else if ((county['population'] > 8000) && (county['population'] < 20000)){
+                  tooltip.text('Severity: Moderate County Cases: ' + county['population'])
+                } else if ((county['population'] > 20000) && (county['population'] < 250000)){
+                  tooltip.text('Severity: Severe County Cases: ' + county['population'])
+                }
+                else {
+                  tooltip.text('Severity: Devilish County Cases: ' + county['population'])
+                }
+
+
+            })
+            .on('mouseout',(countyDataItem)=>{
+              tooltip.transition()
+                    .style("visibility","hidden")
+
+            })
+            .attr('fill',(countyDataItem)=>{
+              let id = countyDataItem['id']
+              let county = covidData.find((item)=>{
+                return +item.us_county_fips === id
+
+              })
+
+
+              if (!county){
+                return 'black'
+              }
+              let numbers = +county['population']
+
+              if(numbers < 3000){
+                return 'limegreen'
+              } else if ((numbers > 3000) && (numbers < 8000)){
+                return 'lightgreen'
+              } else if ((numbers > 8000) && (numbers < 20000)){
+                return 'orange'
+              } else if ((numbers > 20000) && (numbers < 250000)){
+                return 'tomato'
+              } else {
+                return 'firebrick'
+              }
+            })
+
+            .attr('county-fips',(countyDataItem)=>{
+              return countyDataItem['id']
+            })
+            .attr('covid-county-population',(countyDataItem)=>{
+              let id = countyDataItem['id']
+              let county = covidData.find((item)=>{
+                return +item.us_county_fips === id
+
+              })
+              let numbers = +county['population']
+              return numbers
+            })
+  }
+```
+
