@@ -71,7 +71,7 @@ export const map = async function(){
                 let county = covidData.find((item)=>{
                   return +item.us_county_fips === id
                 })
-                
+
                 if (!county){
                   tooltip.text('No info available at this time!')}
                 else if (county['population']< 3000){
@@ -97,7 +97,6 @@ export const map = async function(){
             .attr('fill',(countyDataItem)=>{
               let id = countyDataItem['id']
               let county = covidData.find((item)=>{
-                // console.log(item['us_county_fips'])
                 return +item.us_county_fips === id
 
               })
@@ -105,7 +104,6 @@ export const map = async function(){
 
               if (!county){
                 return 'black'
-                // return 'limegreen'
               }
               let numbers = +county['population']
 
@@ -128,17 +126,9 @@ export const map = async function(){
             .attr('covid-county-population',(countyDataItem)=>{
               let id = countyDataItem['id']
               let county = covidData.find((item)=>{
-                // console.log(item['us_county_fips'])
                 return +item.us_county_fips === id
 
               })
-
-              // let numbers
-              // if (typeof +county['population'] === 'undefined') {
-              //   return '1000'
-              // } else {
-              //   numbers = +county['population']
-              // }
               let numbers = +county['population']
               return numbers
             })
